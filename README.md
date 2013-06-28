@@ -23,7 +23,7 @@ maiah.on('data', function (data) {
 var db = Sockel('/mydb');
 ```
 
-## Selecting a region (or a table similar to sql db)
+## Selecting a region
 ```js
 var person = db.sublevel('person');
 
