@@ -1,8 +1,8 @@
-sockel
+Sockel
 ======
 Evented Realtime Streaming Database for Javascript based on LevelDB.
 
-## sample
+## Sample
 ```js
 var db = Sockel('/mydb'),
     person = db.child('person'),
@@ -18,12 +18,12 @@ maiah.on('value', function (data) {
 });
 ```
 
-## opening a db
+## Opening a db
 ```js
 var db = Sockel('/mydb');
 ```
 
-## selecting a region (or a table similar to sql db)
+## Selecting a region (or a table similar to sql db)
 ```js
 var person = db.child('person');
 
@@ -31,7 +31,7 @@ var person = db.child('person');
 person = persons.child('maiah');
 ```
 
-## setting/updating a region's data
+## Setting/updating a region's data
 ```js
 person.child('name').set('Maiah');
 ```
