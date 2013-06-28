@@ -2,7 +2,7 @@ sockel
 ======
 Evented Realtime Streaming Database for Javascript based on LevelDB.
 
-## Sample:
+## sample
 ```js
 var db = Sockel('/mydb');
 var persons = db.sublevel('persons');
