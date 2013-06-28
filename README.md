@@ -4,16 +4,18 @@ Evented Realtime Streaming Database for Javascript based on LevelDB.
 
 ## sample
 ```js
-var db = Sockel('/mydb');
-var persons = db.child('persons');
-
-persons.on('value', function (data) {
-  console.log('Found data: ' + data.name);
-});
+var db = Sockel('/mydb'),
+    person = db.child('person'),
+    maiah = db.child('maiah');
 
 setTimeout(function () {
-  persons.push({ "name": "Maiah" });
+  console.log('Adding data');
+  maiah.child('name').set('Maiah Mac');
 }, 3000);
+
+maiah.on('value', function (data) {
+  console.log('Reading data: ' + data.name);
+});
 ```
 
 ## opening a db
@@ -23,16 +25,13 @@ var db = Sockel('/mydb');
 
 ## selecting a region (or a table similar to sql db)
 ```js
-var persons = db.child('persons');
+var person = db.child('person');
 
 // selecting a specific sub-region
-var person = persons.child('1');
+person = persons.child('maiah');
 ```
 
 ## setting/updating a region's data
 ```js
-var persons = db.child('persons');
-var person = persons.child('1');
-
 person.child('name').set('Maiah');
 ```
