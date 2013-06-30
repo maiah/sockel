@@ -1,0 +1,34 @@
+{
+  "name": "sockel",
+  "version": "0.0.0",
+  "description": "Evented Realtime Streaming Database for Javascript based on LevelDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maiah/sockel.git"
+  },
+  "keywords": [
+    "leveldb",
+    "levelup",
+    "evented",
+    "realtime",
+    "db",
+    "database"
+  ],
+  "author": "Maiah Macariola",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "39b31449534485cebf9d6e1b6a57d2f18b8036c6",
+  "bugs": {
+    "url": "https://github.com/maiah/sockel/issues"
+  },
+  "dependencies": {
+    "leveldown": "0.6.1",
+    "levelup": "0.10.0",
+    "level-sublevel": "4.7.0"
+    
+  }
+}
