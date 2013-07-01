@@ -33,7 +33,7 @@ var maiah = person.sublevel('maiah');
 
 ## Writing to a region's data
 ```js
-maiah.sublevel('name').set('Maiah Mac');
+maiah.sublevel('name').put('Maiah Mac');
 ```
 
 ## Reading a data
