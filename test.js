@@ -11,6 +11,7 @@ db.put('Hello Leveldb', function (err) {
 });
 
 db.on('data', function (data) {
+  assert(data);
   assert.equal('/', data.location);
   assert(data.val);
   assert(data.val.testdb);
