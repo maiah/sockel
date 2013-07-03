@@ -1,6 +1,6 @@
 Sockel
 ======
-Evented Realtime Streaming Database for Javascript based on LevelDB.
+Evented Realtime Database for Javascript based on LevelDB.
 
 ## Sample
 ```js
