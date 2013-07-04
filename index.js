@@ -43,7 +43,7 @@ Sockel.prototype.on = function (eventType, cb, opts) {
   }
 };
 
-Sockel.prototype.node = function (loc) {
+Sockel.prototype.sub = function (loc) {
   var subdb = this.db.sublevel(loc);
   var obj = new Sockel(subdb);
   obj.location = this.location + loc + '/';

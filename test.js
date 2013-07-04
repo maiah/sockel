@@ -16,7 +16,7 @@ db.on('data', function (data) {
   assert.equal('Hello Leveldb', data['testdb']);
 });
 
-var titleNode = db.node('title');
+var titleNode = db.sub('title');
 
 titleNode.put('Amazing Movie', function (err) {
   assert(!err);
@@ -28,10 +28,10 @@ titleNode.on('data', function (data) {
   assert.equal('Amazing Movie', data['title']);
 });
 
-var personNode = db.node('person');
-var maiahNode = personNode.node('maiah');
+var personNode = db.sub('person');
+var maiahNode = personNode.sub('maiah');
 
-var nameNode = maiahNode.node('name');
+var nameNode = maiahNode.sub('name');
 nameNode.put('Maiah Mac', function (err) {
   assert(!err);
 });

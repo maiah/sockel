@@ -5,12 +5,12 @@ Evented Realtime Database for Javascript based on LevelDB.
 ## Sample
 ```js
 var db = Sockel('/mydb'),
-    person = db.node('person'),
-    maiah = person.node('maiah');
+    person = db.sub('person'),
+    maiah = person.sub('maiah');
 
 setTimeout(function () {
   console.log('Adding data');
-  maiah.node('name').set('Maiah Mac');
+  maiah.sub('name').set('Maiah Mac');
 }, 3000);
 
 maiah.on('data', function (data) {
@@ -25,15 +25,15 @@ var db = Sockel('/mydb');
 
 ## Selecting a region
 ```js
-var person = db.node('person');
+var person = db.sub('person');
 
 // selecting a specific sub-region
-var maiah = person.node('maiah');
+var maiah = person.sub('maiah');
 ```
 
 ## Writing to a region's data
 ```js
-maiah.node('name').put('Maiah Mac');
+maiah.sub('name').put('Maiah Mac');
 ```
 
 ## Reading a data
